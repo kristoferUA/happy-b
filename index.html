@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fffaf4" />
+    <meta
+      name="description"
+      content="Ніжна святкова листівка до дня народження Ані Омельченко"
+    />
+    <title>З днем народження, Аню!</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <div class="ambient ambient--one" aria-hidden="true"></div>
+    <div class="ambient ambient--two" aria-hidden="true"></div>
+
+    <main class="card-shell">
+      <img
+        class="flowers flowers--left"
+        src="./assets/lavender-flowers.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        class="flowers flowers--right"
+        src="./assets/lavender-flowers.png"
+        alt=""
+        aria-hidden="true"
+      />
+
+      <section class="hero" aria-labelledby="birthday-title">
+        <p class="eyebrow reveal reveal--1">
+          <span></span> сьогодні твій день <span></span>
+        </p>
+
+        <div class="sparkle sparkle--one" aria-hidden="true">✦</div>
+        <div class="sparkle sparkle--two" aria-hidden="true">✧</div>
+
+        <h1 id="birthday-title" class="reveal reveal--2">
+          З днем народження,
+          <strong>Аню</strong>
+        </h1>
+
+        <p class="surname reveal reveal--3">Омельченко</p>
+        <p class="intro reveal reveal--4">
+          Нехай цей день буде легким, світлим<br />
+          і сповненим маленьких див.
+        </p>
+
+        <a class="scroll-cue reveal reveal--5" href="#wish" aria-label="Відкрити побажання">
+          <span>для тебе дещо є</span>
+          <i aria-hidden="true">↓</i>
+        </a>
+      </section>
+
+      <section class="celebration" id="wish" aria-label="Особисте побажання для Ані">
+        <div class="wish-copy">
+          <p class="section-kicker">Особливі слова</p>
+          <h2>З найтеплішими<br />побажаннями</h2>
+        </div>
+
+        <button class="envelope" type="button" aria-expanded="false" aria-controls="letter-card">
+          <img src="./assets/envelope.png" alt="Відкритий конверт із листівкою" />
+          <span class="envelope__hint">натисни, щоб відкрити</span>
+        </button>
+
+        <button class="letter-backdrop" type="button" tabindex="-1" aria-label="Закрити лист"></button>
+
+        <article
+          class="letter-card"
+          id="letter-card"
+          role="dialog"
+          aria-modal="true"
+          aria-hidden="true"
+          aria-labelledby="letter-title"
+        >
+          <button class="letter-card__close" type="button" aria-label="Закрити лист">×</button>
+          <p class="letter-card__for" id="letter-title">Для Ані</p>
+          <!-- Замініть наступний абзац власним побажанням. -->
+          <p class="letter-card__text">
+            Бажаю тобі безмежного щастя, здоров’я, любові та радості в кожному дні. Нехай навчання тобі дається легко, а нові досягнення приносять задоволення. Залишайся такою ж чудовою та натхненною людиною, якою ти є!
+          </p>
+          <span class="letter-card__heart" aria-hidden="true">♥</span>
+        </article>
+      </section>
+
+      <section class="cake-scene" aria-label="Святковий торт">
+        <div class="cake-copy">
+          <p>Загадай бажання</p>
+          <h2>і нехай воно<br /><em>обов’язково здійсниться</em></h2>
+        </div>
+        <button class="cake" type="button" aria-label="Задмухнути свічку й запустити конфеті">
+          <span class="cake__art">
+            <span class="cake__glow" aria-hidden="true"></span>
+            <img
+              class="cake__image cake__image--lit"
+              src="./assets/birthday-cake.png"
+              alt="Святковий торт з однією запаленою свічкою"
+            />
+            <img
+              class="cake__image cake__image--out"
+              src="./assets/birthday-cake-out.png"
+              alt=""
+              aria-hidden="true"
+            />
+          </span>
+          <span class="cake__hint">натисни на свічку</span>
+        </button>
+      </section>
+
+      <footer>
+        <span>Нехай щастя квітне щодня</span>
+        <span class="footer-flower" aria-hidden="true">❀</span>
+        <span>для Ані</span>
+        <span class="footer-flower" aria-hidden="true">❀</span>
+        <span>Від kristoferUA</span>
+      </footer>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
