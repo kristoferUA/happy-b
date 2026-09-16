@@ -765,11 +765,13 @@ footer span {
 }
 
 .envelope-back {
+  z-index: 0;
   border: 1px solid rgba(255, 255, 255, 0.32);
   background: linear-gradient(145deg, #f9f0df, #d8c49e);
 }
 
 .envelope-letter-preview {
+  z-index: 2;
   top: 8%;
   right: 7%;
   bottom: 14%;
@@ -786,6 +788,7 @@ footer span {
 }
 
 .envelope-front {
+  z-index: 3;
   background:
     linear-gradient(32deg, #c8af7f 0 49%, transparent 50%),
     linear-gradient(-32deg, #eadbbd 0 49%, transparent 50%);
@@ -793,11 +796,20 @@ footer span {
 }
 
 .envelope-flap {
-  z-index: 3;
+  z-index: 4;
+  top: 4%;
+  right: 2%;
+  bottom: auto;
+  left: 2%;
+  height: 78%;
+  border-radius: 0.8rem;
   background: linear-gradient(165deg, #fff8e8, #d2bc91);
-  clip-path: polygon(0 0, 100% 0, 50% 72%);
-  transform-origin: top;
-  transition: transform 600ms ease;
+  clip-path: polygon(1% 2%, 99% 2%, 50% 66%);
+  transform-origin: 50% 2%;
+  transition:
+    top 600ms ease,
+    transform 600ms ease,
+    z-index 0s linear 300ms;
 }
 
 .wax-seal {
@@ -831,6 +843,8 @@ footer span {
 }
 
 .envelope-stage.is-opening .envelope-flap {
+  z-index: 1;
+  top: 12%;
   transform: rotateX(180deg);
 }
 
