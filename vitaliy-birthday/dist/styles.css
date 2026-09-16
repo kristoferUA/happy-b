@@ -783,8 +783,13 @@ footer span {
   font-family: Georgia, serif;
   font-size: 1.25rem;
   letter-spacing: 0.08em;
+  visibility: hidden;
+  opacity: 0;
   transform: translateY(0);
-  transition: transform 650ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition:
+    transform 650ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    opacity 160ms ease 300ms,
+    visibility 0s linear 300ms;
 }
 
 .envelope-front {
@@ -849,6 +854,8 @@ footer span {
 }
 
 .envelope-stage.is-opening .envelope-letter-preview {
+  visibility: visible;
+  opacity: 1;
   transform: translateY(-44%);
 }
 
