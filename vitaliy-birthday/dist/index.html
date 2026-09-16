@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Особливе привітання з днем народження для Іванченка Віталія Євгеновича."
+    />
+    <meta name="theme-color" content="#06112d" />
+    <title>З днем народження, Віталію!</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2306112d'/%3E%3Cpath d='M32 8c7 9 5 15 0 18-5-3-7-9 0-18Z' fill='%23ffcc75'/%3E%3Cpath d='M17 35h30v15a6 6 0 0 1-6 6H23a6 6 0 0 1-6-6V35Z' fill='%23206aff'/%3E%3Cpath d='M14 35h36v7c-4 3-8-3-12 0s-8-3-12 0-8-3-12 0v-7Z' fill='%23f2b85c'/%3E%3Cpath d='M32 25v10' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Unbounded:wght@500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="aurora aurora-two" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="monogram" href="#top" aria-label="На початок сторінки">V</a>
+      <p class="dedication">Іванченко Віталій Євгенович</p>
+      <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="true" aria-label="Вимкнути звукові ефекти">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9v6h4l5 4V5L9 9H5Zm12.5 3a5 5 0 0 0-2-4v8a5 5 0 0 0 2-4Z" /></svg>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="birthday-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Цей день — твій</p>
+          <h1 id="birthday-title">З днем<br />народження,<br /><em>Віталію!</em></h1>
+          <p class="lead">
+            Нехай у новому році життя буде більше сміливих планів, правильних людей поруч
+            і моментів, які хочеться запам’ятати назавжди.
+          </p>
+
+          <div class="wish-panel" id="wishPanel">
+            <div class="wish-number" aria-hidden="true">01</div>
+            <div class="wish-copy">
+              <p class="wish-kicker">Час загадати бажання</p>
+              <p class="wish-status" id="wishStatus" aria-live="polite">
+                Натисни кнопку й задуй свічку по-справжньому
+              </p>
+            </div>
+            <button class="primary-button" id="micButton" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V22h2v-3.08A7 7 0 0 0 19 12h-2Z" /></svg>
+              <span>Увімкнути мікрофон</span>
+            </button>
+            <button class="text-button" id="tapBlowButton" type="button">або задути дотиком</button>
+          </div>
+
+          <button class="card-button" id="cardButton" type="button" aria-haspopup="dialog" disabled>
+            <span class="card-button-icon" aria-hidden="true">✦</span>
+            <span><small>Бажання загадано</small>Відкрити особисту листівку</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+          </button>
+        </div>
+
+        <div class="cake-column" id="cakeColumn">
+          <div class="orbit orbit-one" aria-hidden="true"><span>В</span><i>✦</i><b>2026</b></div>
+          <div class="orbit orbit-two" aria-hidden="true"><i>✦</i><span>ЩАСТЯ</span><i>✦</i></div>
+          <div class="cake-halo" aria-hidden="true"></div>
+          <button class="cake-wrap" id="cakeButton" type="button" aria-label="Задути свічку дотиком">
+            <img src="assets/midnight-cake.png" alt="Святковий синьо-золотий торт з однією свічкою" />
+            <span class="flame" id="flame" aria-hidden="true"><i></i></span>
+            <span class="smoke" id="smoke" aria-hidden="true"><i></i><i></i><i></i></span>
+          </button>
+          <p class="cake-hint"><span class="pulse-dot"></span> Свічка чекає на твоє бажання</p>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span> трохи магії нижче</div>
+      </section>
+
+      <section class="toast" aria-label="Побажання Віталію">
+        <div class="toast-heading">
+          <p class="section-number">02 / Твій новий розділ</p>
+          <h2>Нехай усе<br />важливе <em>вдається.</em></h2>
+        </div>
+        <div class="toast-grid">
+          <article>
+            <span>01</span>
+            <h3>Впевненості</h3>
+            <p>Обирати своє, не боятися великих цілей і завжди довіряти собі.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Сильного оточення</h3>
+            <p>Людей, з якими легко святкувати перемоги й проходити складні сесії.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Яскравих моментів</h3>
+            <p>Подорожей, нових відкриттів і історій, які згодом стануть легендами.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Створено спеціально для Віталія</p>
+      <span>✦</span>
+      <p>З найтеплішими побажаннями</p>
+    </footer>
+
+    <dialog class="card-dialog" id="cardDialog" aria-labelledby="cardTitle">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Закрити листівку">×</button>
+      <div class="envelope-stage" id="envelopeStage">
+        <button class="sealed-card" id="openEnvelopeButton" type="button" aria-label="Відкрити конверт">
+          <span class="envelope-back"></span>
+          <span class="envelope-letter-preview">Для Віталія</span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal">V</span>
+        </button>
+        <p class="envelope-hint">Натисни на печатку</p>
+      </div>
+
+      <article class="letter" id="letter">
+        <p class="letter-overline">Особисто для тебе</p>
+        <h2 id="cardTitle" tabindex="-1">Дорогий Віталію!</h2>
+
+        <!--
+          ОСОБИСТЕ ПРИВІТАННЯ:
+          Щоб змінити листівку, відредагуйте лише текст у двох абзацах нижче.
+          HTML-теги <p> та атрибути змінювати не потрібно.
+        -->
+        <div class="message-view">
+          <p id="personalMessage">
+            Віталію, щиро вітаю тебе з днем народження! Бажаю, щоб навчання відкривало
+            нові можливості, поруч завжди були люди, з якими легко йти вперед, а кожна
+            велика мета ставала ще однією здійсненою мрією. Нехай вистачає сил,
+            натхнення та впевненості — і на важливі справи, і на яскраві пригоди.
+            Залишайся собою, сміливо бери від життя найкраще й нехай цей рік принесе
+            багато приводів пишатися собою!
+          </p>
+          <p class="signature" id="personalSignature">— З найтеплішими побажаннями</p>
+        </div>
+        <!-- КІНЕЦЬ ОСОБИСТОГО ПРИВІТАННЯ -->
+
+        <div class="letter-mark" aria-hidden="true">V</div>
+      </article>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
