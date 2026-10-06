@@ -78,7 +78,7 @@
   }
   function celebrate(count, x, y) {
     if (!ctx || !motionEnabled || document.hidden) return;
-    const colors = ['#781e36', '#b34c67', '#e2a8b1', '#c49656', '#edd2a8', '#fff9ee'];
+    const colors = ['#8d3d71', '#ba5d8e', '#e6a1ba', '#c89770', '#e4c6d8', '#fff9fc'];
     for (let i = 0; i < count; i++) {
       const angle = Math.random() * Math.PI * 2;
       const velocity = 3 + Math.random() * 9;
