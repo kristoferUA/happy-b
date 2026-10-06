@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090e">
+  <meta name="description" content="Особиста космічна листівка для Фіца Івана. З днем народження, Іване!">
+  <title>З днем народження, Іване! · Фіц Іван</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2307090e'/%3E%3Cellipse cx='32' cy='32' rx='25' ry='10' transform='rotate(-24 32 32)' fill='none' stroke='%23f0b779' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%2307090e' stroke='%23f0b779' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="wishes.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <header class="topbar">
+    <a class="wordmark" href="#home" aria-label="На початок"><span class="orbit-mark" aria-hidden="true"></span>ОРБІТА ІВАНА</a>
+    <nav aria-label="Святкова навігація"><a href="#message">Твій сигнал</a><a href="#wish">Твоє бажання</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="birthdayTitle">
+      <div class="blackhole-scene" aria-hidden="true"><img src="assets/blackhole.png" width="1536" height="1024" alt="" class="blackhole-art" fetchpriority="high"><div class="scene-shade"></div></div>
+      <div class="hero-content">
+        <p class="eyebrow entrance"><span class="tiny-star" aria-hidden="true">✦</span> СЬОГОДНІ ВСЕСВІТ СВЯТКУЄ</p>
+        <h1 id="birthdayTitle" class="entrance delay-one">З днем<br>народження,<br><em>Іване.</em></h1>
+        <p class="hero-name entrance delay-two">ФІЦ ІВАН <span> / </span> ЦЕНТР ЦІЄЇ ГАЛАКТИКИ</p>
+        <a class="primary-link entrance delay-three" href="#message"><span class="link-star" aria-hidden="true">✦</span>Тобі надійшов сигнал</a>
+      </div>
+      <div class="astronaut-wrap" aria-hidden="true"><img class="astronaut" src="assets/astronaut-nasa.png" alt="" width="945" height="1664"></div>
+      <div class="hero-bottom"><span class="coordinate">ЗА МЕЖАМИ БУДЕННОСТІ / ∞</span></div>
+    </section>
+
+    <section class="signal-section section-wrap" id="message" aria-labelledby="signalTitle">
+      <div class="section-top reveal"><span class="eyebrow">01 / МІЖЗОРЯНА ПОШТА</span><span class="section-line"></span><span class="section-symbol" aria-hidden="true">✧</span></div>
+      <div class="signal-grid">
+        <div class="signal-copy reveal">
+          <h2 id="signalTitle">Особливий сигнал.<br><em>Особисто для тебе.</em></h2>
+          <p class="section-description">Навіть крізь чорні діри<br>теплі слова знаходять свій шлях.</p>
+          <div class="transmission"><span class="transmission-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span>Є ОДНЕ НЕПРОЧИТАНЕ ПОВІДОМЛЕННЯ</span></div>
+        </div>
+        <div class="satellite-scene reveal">
+          <div class="signal-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+          <button class="satellite-button" id="openLetter" type="button" aria-haspopup="dialog" aria-controls="letterDialog" aria-label="Натисни на мене — відкрити лист із побажаннями">
+            <img src="assets/satellite.png" width="1536" height="1024" alt="Космічний супутник із синіми сонячними панелями й екраном" loading="lazy">
+            <span class="satellite-display"><span class="screen-star" aria-hidden="true">✦</span><span>натисни<br>на мене</span></span>
+          </button>
+          <p class="satellite-caption"><span aria-hidden="true">✦</span> ПОВІДОМЛЕННЯ ІЗ ДАЛЕКОГО КОСМОСУ</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wish-section section-wrap" id="wish" aria-labelledby="wishTitle">
+      <div class="section-top reveal"><span class="eyebrow">02 / МАЛЕНЬКИЙ ВЕЛИКИЙ ВИБУХ</span><span class="section-line"></span><span class="section-symbol" aria-hidden="true">✧</span></div>
+      <div class="wish-grid">
+        <div class="cake-scene reveal">
+          <div class="cake-aura" aria-hidden="true"></div>
+          <button class="cake-button" id="cakeButton" type="button" aria-label="Задмухнути свічку та запустити конфеті">
+            <span class="cake-image-wrap"><img class="cake-base" src="assets/cake.png" width="1024" height="1024" alt="Темно-синій святковий торт із золотими зірками й однією свічкою" loading="lazy"><img class="cake-flame" src="assets/cake.png" width="1024" height="1024" alt="" aria-hidden="true" loading="lazy"></span>
+          </button>
+          <p class="cake-caption">ОДНА СВІЧКА. БЕЗМЕЖНО МОЖЛИВОСТЕЙ.</p>
+        </div>
+        <div class="wish-copy reveal">
+          <h2 id="wishTitle">Загадай те,<br>що здається<br><em>неможливим.</em></h2>
+          <p class="section-description" id="wishStatus" aria-live="polite">Заплющ очі. Збережи бажання в таємниці.<br>А потім натисни на свічку.</p>
+          <button class="text-button" id="blowButton" type="button"><span aria-hidden="true">✦</span> Задмухнути свічку</button>
+          <button class="text-button" id="relightButton" type="button" hidden><span aria-hidden="true">✦</span> Запалити ще раз</button>
+        </div>
+      </div>
+    </section>
+    <section class="closing section-wrap reveal" aria-label="Святкове завершення"><span class="closing-star" aria-hidden="true">✦</span><p>У безмежному космосі<br>сьогодні є <em>твій день.</em></p></section>
+  </main>
+  <footer class="footer section-wrap"><span>Для Фіца Івана від kristoferUA</span><span>З ДНЕМ НАРОДЖЕННЯ <span aria-hidden="true">✦</span></span><a href="#home">На початок</a></footer>
+
+  <dialog id="letterDialog" class="letter-dialog" aria-labelledby="letterTitle">
+    <article class="letter-paper">
+      <div class="letter-top"><span class="eyebrow">ОСОБИСТА ПЕРЕДАЧА / ДЛЯ ІВАНА</span><button id="closeLetter" class="close-letter" type="button" aria-label="Закрити лист">×</button></div>
+      <span class="letter-star" aria-hidden="true">✦</span>
+      <h2 id="letterTitle">Іване, <em>з твоїм днем.</em></h2>
+      <!-- Додай власні побажання в wishes.js. Поки вони порожні, лист лишається чистим. -->
+      <div id="personalMessage" class="personal-message"></div>
+      <div id="blankLetter" class="blank-letter" aria-label="Чистий лист для особистих побажань"><span></span><span></span><span></span><span></span><span></span></div>
+      <p id="personalSignature" class="personal-signature" hidden></p>
+      <div class="letter-bottom"><span>ВІДПРАВЛЕНО З ТЕПЛОМ</span><span aria-hidden="true">✧</span></div>
+    </article>
+  </dialog>
+  <noscript><p class="no-script">Щоб відкрити побажання та задмухнути свічку, увімкни JavaScript у браузері.</p></noscript>
+</body>
+</html>
