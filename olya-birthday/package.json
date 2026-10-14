@@ -1,0 +1,10 @@
+{
+  "name": "olya-birthday",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Дружня святкова листівка для Олі Козел",
+  "scripts": {
+    "dev": "node server.cjs",
+    "check": "node --check dist/script.js && node --check dist/wishes.js && node --check server.cjs"
+  }
+}

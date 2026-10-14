@@ -1,0 +1,14 @@
+[
+  {
+    "asset": "dist/assets/wildflowers.png",
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "prompt": "Use case: illustration-story. Asset type: transparent botanical hero artwork for a refined Ukrainian birthday web page. Create a gorgeous airy hand-painted watercolor bouquet of WILDFLOWERS: large delicate white oxeye daisies with golden yellow centers, powder-blue cornflowers, a few pale blush-pink cosmos, tiny butter-yellow blossoms, delicate green meadow grasses and olive-sage stems. Natural asymmetrical arrangement, loosely tied at the bottom with a flowing narrow dusty pink silk ribbon. Full bouquet visible, portrait composition, flowers reaching up and sideways gracefully with a few individual loose petals, ample transparent margin. Charming high-end botanical stationery artwork, realistic watercolor paper pigment texture within flowers, beautifully detailed fine stems and leaves, spring meadow feeling, gentle muted tones with clear blue and soft pink accents. Keep center flower arrangement abundant but organic and see-through between stems. Isolated on genuinely transparent background, no white rectangle, no background, no vase, no lettering, no typography, no watermark. Tall 2:3 framing."
+  },
+  {
+    "asset": "dist/assets/meadow-cake.png",
+    "tool": "built-in ImageGen",
+    "transparent_background": true,
+    "prompt": "Use case: illustration-story. Asset type: isolated birthday cake illustration for an elegant meadow-themed birthday web page. Create one gorgeous small round single-tier vanilla birthday cake with pale ivory buttercream, delicate piped scalloped cream top edge, a pale dusty-rose icing ribbon around the bottom. Decorated with a handful of tiny white daisies with warm yellow centers, two powder blue cornflowers, a single delicate pale-pink cosmos and a few tiny sage leaves at the lower right and top far sides; airy fine botanical decoration. The cake sits on a delicate simple ivory porcelain footed cake stand. Straight front view with a slight view of the flat elliptical top surface. Painterly watercolor/gouache illustration with subtle dimensional shading and soft fine paper pigment texture. Gentle sophisticated botanical stationery style. IMPORTANT: absolutely NO candle, NO flame, NO lettering, NO numbers, no cut slice. Keep the center of top surface completely clear so a candle can later be added with code. Centered object, entire pedestal and cake visible, broad transparent margins. Square framing, genuinely transparent background, no landscape, no backdrops, no watermark."
+  }
+]

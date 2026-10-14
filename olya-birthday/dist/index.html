@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e5eef9">
+  <meta name="description" content="Святковий пікнік для Олі Козел: польові квіти, конверт із дружніми побажаннями, торт і конфеті.">
+  <title>Олю, з днем народження! · Козел Оля</title>
+  <link rel="icon" href="assets/daisy.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="wishes.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">До привітання</a>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="daisy" viewBox="0 0 64 64"><g fill="currentColor"><ellipse cx="32" cy="17" rx="6" ry="13"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(45 32 32)"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(90 32 32)"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(135 32 32)"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(180 32 32)"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(225 32 32)"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(270 32 32)"/><ellipse cx="32" cy="17" rx="6" ry="13" transform="rotate(315 32 32)"/></g><circle cx="32" cy="32" r="8" fill="#e7b449"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="curved-arrow" viewBox="0 0 90 70"><path d="M7 8C63 0 25 61 74 51M63 40l13 11-14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></symbol>
+  </defs></svg>
+  <header class="site-header"><a class="brand" href="#home" aria-label="На початок листівки"><svg aria-hidden="true"><use href="#daisy"/></svg><span>ОЛЯ КОЗЕЛ <b>святковий випуск</b></span></a><nav aria-label="Святкова навігація"><a href="#letter">Конверт</a><a href="#wish">Торт зі свічкою</a></nav><button class="celebrate-button" type="button" data-celebrate><span aria-hidden="true">✳</span> Конфеті!</button></header>
+  <main id="main">
+    <section class="birthday-table" id="home" aria-labelledby="birthday-title">
+      <div class="collage-hero">
+        <div class="day-sticker entrance delay-two" aria-hidden="true"><span>ПЛАН НА ДЕНЬ</span><svg><use href="#daisy"/></svg><strong>СВЯТКУВАТИ!</strong></div>
+        <div class="birthday-card entrance"><span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span><p class="card-kicker">СЬОГОДНІ ВСІ ПРИВІТАННЯ — ТОБІ</p><h1 id="birthday-title"><span class="name-line">Олю,</span><span class="birthday-line">з днем</span><span class="birthday-line last-line">народження!</span></h1><div class="card-bottom"><span>КОЗЕЛ ОЛЯ</span><span class="card-squiggle" aria-hidden="true">〰</span><span>ЦЕ ТВІЙ ДЕНЬ</span></div></div>
+        <figure class="bouquet-sticker entrance delay-one"><div class="bouquet-motion"><img src="assets/wildflowers.png" alt="Букет польових ромашок, волошок, космей та лугових трав" width="1024" height="1536" fetchpriority="high"></div><figcaption>квіти до свята!</figcaption></figure>
+        <div class="daisy-sticker" aria-hidden="true"><svg><use href="#daisy"/></svg></div><span class="hero-star star-one" aria-hidden="true">✷</span><span class="hero-star star-two" aria-hidden="true">✦</span>
+        <div class="table-note entrance delay-three"><span>Усі справи можуть<br>трішки зачекати.</span><svg aria-hidden="true"><use href="#curved-arrow"/></svg></div>
+      </div>
+      <div class="table-objects">
+        <section class="envelope-scene reveal" id="letter" aria-labelledby="letter-heading"><h2 class="object-label" id="letter-heading"><span class="label-number">01</span> Тобі лист!</h2><button class="envelope" type="button" data-open-letter aria-label="Відкрити конверт із побажаннями для Олі" aria-haspopup="dialog" aria-controls="letter-dialog"><span class="envelope-back"></span><span class="envelope-letter" aria-hidden="true"><svg><use href="#daisy"/></svg><span>Олю, з твоїм днем!</span><i></i><i></i><i></i></span><span class="envelope-front"></span><span class="envelope-fold"></span><span class="envelope-flap"></span><span class="wax-seal" aria-hidden="true"><svg><use href="#daisy"/></svg></span><span class="envelope-label" aria-hidden="true">Для Олі</span></button><button class="object-button letter-link" type="button" data-open-letter aria-haspopup="dialog" aria-controls="letter-dialog">Відкрити конверт <svg aria-hidden="true"><use href="#arrow"/></svg></button><p class="object-hint">Тут є місце для кількох особливих слів.</p><span class="object-doodle" aria-hidden="true">✳</span></section>
+        <section class="cake-scene reveal" id="wish" aria-labelledby="wish-heading"><h2 class="object-label" id="wish-heading"><span class="label-number">02</span> Час загадати бажання</h2><button class="cake-button" id="cake-button" type="button" aria-label="Задмухнути свічку та запустити конфеті"><span class="cake-plate" aria-hidden="true"></span><img class="cake-art" src="assets/meadow-cake.png" width="1254" height="1254" alt="Ванільний торт із польовими квітами на святковій підставці" loading="lazy"><span class="candle" aria-hidden="true"><span class="candle-glow"></span><span class="flame"></span><span class="wick"></span><span class="candle-body"></span><span class="smoke smoke-one"></span><span class="smoke smoke-two"></span></span></button><button class="object-button wish-button" id="blow-button" type="button">Задмухнути свічку <span aria-hidden="true">✧</span></button><p class="wish-status object-hint" id="wish-status" aria-live="polite">Загадай бажання й натисни на свічку або кнопку.</p><button class="relight-button" id="relight-button" type="button" hidden>Запалити ще раз <span aria-hidden="true">↻</span></button><span class="cake-doodle" aria-hidden="true">✷</span></section>
+      </div>
+      <div class="party-strip reveal"><span aria-hidden="true">✳</span><p>Свято триває.<br><strong>Додамо конфеті!</strong></p><button class="party-button" type="button" data-celebrate>Ще один залп конфеті <svg aria-hidden="true"><use href="#arrow"/></svg></button><span class="strip-star" aria-hidden="true">✦</span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>З ДНЕМ НАРОДЖЕННЯ, ОЛЮ!</span><span>Польові квіти & гарний настрій</span><a href="#home">Догори ↑</a></footer>
+  <dialog class="letter-dialog" id="letter-dialog" aria-labelledby="letter-title"><article class="letter-paper"><div class="letter-top"><p>СВЯТКОВА ПОШТА / ДЛЯ ОЛІ</p><button class="close-letter" id="close-letter" type="button" aria-label="Закрити лист" autofocus>×</button></div><div class="postage-stamp" aria-hidden="true"><svg><use href="#daisy"/></svg><span>ДЕНЬ ОЛІ</span></div><h2 id="letter-title">Олю,<br>з днем народження!</h2><!-- Власні побажання й підпис додай у wishes.js. --><div class="personal-message" id="personal-message"></div><div class="blank-letter" id="blank-letter" aria-label="Чисте місце для особистих побажань"><span></span><span></span><span></span><span></span><span></span></div><p class="personal-signature" id="personal-signature" hidden></p><div class="letter-bottom"><span>ЛИСТІВКА ДО ТВОГО СВЯТА</span><span aria-hidden="true">✳</span></div></article></dialog>
+  <p class="sr-only" id="celebration-status" aria-live="polite"></p><noscript><p class="no-script">Увімкни JavaScript у браузері, щоб відкрити конверт і задмухнути свічку.</p></noscript>
+</body>
+</html>
+
+
